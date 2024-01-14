@@ -7,10 +7,10 @@ from firebase_admin import credentials
 from firebase_admin import db
 from firebase_admin import storage
 
-cred = credentials.Certificate("D:/lan/PycharmProjects/Attend/firebase.json")
+cred = credentials.Certificate("")
 firebase_admin.initialize_app(cred,{
-    'databaseURL': 'https://faceattend-1d436-default-rtdb.firebaseio.com/',
-    'storageBucket': "faceattend-1d436.appspot.com"
+    'databaseURL': '',
+    'storageBucket': ""
 })
 
 
