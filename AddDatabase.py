@@ -2,9 +2,9 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
 
-cred = credentials.Certificate("D:/lan/PycharmProjects/Attend/firebase.json")
+cred = credentials.Certificate("")
 firebase_admin.initialize_app(cred,{
-    'databaseURL': 'https://faceattend-1d436-default-rtdb.firebaseio.com/'
+    ''
 })
 
 ref = db.reference('Students')
