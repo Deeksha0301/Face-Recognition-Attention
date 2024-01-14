@@ -2,6 +2,17 @@ import pickle
 import cv2
 import face_recognition
 import os
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
+from firebase_admin import storage
+
+cred = credentials.Certificate("D:/lan/PycharmProjects/Attend/firebase.json")
+firebase_admin.initialize_app(cred,{
+    'databaseURL': 'https://faceattend-1d436-default-rtdb.firebaseio.com/',
+    'storageBucket': "faceattend-1d436.appspot.com"
+})
+
 
 # importing student images
 folderPath = 'Images'
@@ -13,6 +24,12 @@ for path in pathList:
     imgList.append(cv2.imread(os.path.join(folderPath, path)))
     # print(os.path.splitext(path)[0])
     studentId.append(os.path.splitext(path)[0])
+
+    fileName = f'{folderPath}/{path}'
+    bucket = storage.bucket()
+    blob = bucket.blob(fileName)
+    blob.upload_from_filename(fileName)
+
 
 # print(imgList)
 
