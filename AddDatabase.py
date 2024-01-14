@@ -30,6 +30,16 @@ data = {
             "year": 1,
             "last_attendance_time": "2022-12-11 00:54:34"
         },
+    "945673":
+        {
+            "name": "Deeksha Mandal",
+            "major": "Computer Science",
+            "starting_year": 2020,
+            "total_attendance": 17,
+            "standing": "A",
+            "year": 4,
+            "last_attendance_time": "2022-12-11 00:54:34"
+        },
     "963852":
         {
             "name": "Elon Musk",
